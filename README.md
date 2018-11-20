@@ -4,3 +4,5 @@
 - art-template模板的使用
 - nunjucks模板的使用
 
+使用前请先npm install，安装项目依赖包
+
