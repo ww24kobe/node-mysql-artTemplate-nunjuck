@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ row[0].title }}</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+</head>
+<body>
+	<div class="header">
+        <span><a href="/index">文章列表</a></span>
+        <span><a href="/add">添加文章</a></span>
+    </div>
+    <h3>标题： {{ row[0].title }} </h3>
+    <p>内容： {{ row[0].content }} </p>   
+</body>
+<script>
+    var row = {{ row }};
+    console.log(row);
+</script>
+</html>

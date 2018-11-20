@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+</head>
+<body>
+    <div class="header">
+            <span><a href="/index">文章列表</a></span>
+            <span><a href="/add">添加文章</a></span>
+    </div>
+    <form action="/add" method="post">  
+        <p>
+           标题： <input type="text" name="title" id="">
+        </p>  
+        <p>
+           内容： <textarea name="content" id="" cols="30" rows="10"></textarea>
+        </p> 
+        <p>
+          <input type="submit" value="添加" />  
+        </p>    
+    </form> 
+</body>
+</html>

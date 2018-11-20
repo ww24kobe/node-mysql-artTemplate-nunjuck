@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <script type="text/javascript" src='/public/js/alert2.js'></script>
+    <script type="text/javascript" src='/public/js/alert.js'></script>
+</head>
+<body>
+        <div class="header">
+            <span><a href="/index">文章列表</a></span>
+            <span><a href="/add">添加文章</a></span>
+        </div>
+        <table border="2px" width="500px" cellspacing="0px">
+            <tr>
+                <th>序号</th>
+                <th>标题</th>
+                <th>内容</th>
+                <th>操作</th>
+            </tr>
+
+            <!-- nunjucks模板语法 -->
+            {% for item in rows  %}
+            <tr>
+              <td>{{ item.id }}</td>
+              <td>{{ item.title }}</td>
+              <td>{{ item.content }}</td>
+              <td>
+                <a href="/upd/?id={{ item.id }}">编辑</a>
+                <a href="/del/?id={{ item.id }}">删除</a>
+              </td>
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>
